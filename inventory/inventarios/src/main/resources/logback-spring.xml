@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Definición de un appender llamado STDOUT que envía los logs a la consola -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Patrón de formato para los mensajes de log -->
+            <pattern>[%thread] %-5level: %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configuración del logger raíz -->
+    <root level="info">
+        <!-- Referencia al appender STDOUT para enviar los logs a la consola -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

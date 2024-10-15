@@ -1,0 +1,37 @@
+<!-- Contenedor principal -->
+<div class="container">
+
+  <!-- Encabezado centrado con margen -->
+  <div class="container text-center" style="margin: 30px">
+      <h3>Modify product details</h3>
+  </div>
+
+  <!-- Formulario con evento de envío -->
+  <form (ngSubmit)="onSubmit()">
+    
+      <!-- Campo para modificar la descripción del producto -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Modify Product Description</label>
+        <input type="text" class="form-control" id="description" name="description" required="true" [(ngModel)]="producto.description">
+      </div>
+
+      <!-- Campo para modificar el precio -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" step="any" class="form-control" id="price" name="price" [(ngModel)]="producto.price">
+      </div>
+
+      <!-- Campo para modificar el stock -->
+      <div class="mb-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="number" class="form-control" id="stock" name="stock" [(ngModel)]="producto.stock">
+      </div>  
+
+      <!-- Botones de acción -->
+      <div class="text-center">
+          <button type="submit" class="btn btn-warning btn-lg me-4">Create</button>
+          <a href="/" class="btn btn-danger btn-lg">Home</a>    
+      </div>
+    </form>
+
+</div>

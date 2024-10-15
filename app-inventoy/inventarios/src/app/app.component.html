@@ -1,0 +1,42 @@
+<!-- Contenedor principal para la barra de navegación -->
+<div class="container">
+  
+  <!-- Barra de navegación de Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #dc7633;">
+      <div class="container-fluid">
+
+        <!-- Enlace del logo/título que lleva a la lista de productos -->
+        <a class="navbar-brand" routerLink="productos">Inventory Systems</a>
+
+        <!-- Botón de hamburguesa para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido de la barra de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+
+            <!-- Enlace a la página de inicio (lista de productos) -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="productos" routerLinkActive="active">Home</a>
+            </li>
+
+            <!-- Enlace para crear un nuevo producto -->
+            <li class="nav-item">
+              <a class="nav-link" 
+              routerLink="new-product"
+              routerLinkActive="active">New Product</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<!-- Contenedor para el contenido de las rutas -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
